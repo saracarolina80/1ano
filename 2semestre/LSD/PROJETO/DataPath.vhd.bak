@@ -1,0 +1,102 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Datapath is 
+	port(clk      : in  std_logic;
+		  reset    : in  std_logic;
+		  EnPc     : in  std_logic;
+		  RI       : in  std_logic;
+		  RegDst   : in  std_logic;
+		  RegWr    : in  std_logic;
+		  AluSrc   : in  std_logic;
+		  AluOp    : in  std_logic_vector(3 downto 0);
+		  MemWr    : in  std_logic;
+		  MemtoReg : in  std_logic;
+		  opcode   : out std_logic_vector(2 downto 0);
+		  func     : out std_logic_vector(3 downto 0));
+		  
+end Datapath;
+
+architecture Structural of Datapath is 
+	signal s_cnt      : std_logic_vector(3 downto 0);
+	signal s_readData : std_logic_vector(15 downto 0);
+	signal s_wrAddress: std_logic_vector(2 downto 0);
+	signal s_wrData: std_logic_vector(7 downto 0);
+	signal s_readData1: std_logic_vector(7 downto 0);
+	signal s_readData2: std_logic_vector(7 downto 0);
+	signal s_sizeOut  : std_logic_vector(7 downto 0);
+	signal s_op2      : std_logic_vector(7 downto 0);
+	signal s_addr     : std_logic_vector(7 downto 0);
+	signal s_input1   : std_logic_vector(7 downto 0);
+	
+begin 
+
+	PC : entity work.Counter(Behavioral)
+		  generic map(N => 4)
+		  port map(	enable => EnPc,
+						clk    => clk,
+						reset  => reset,
+						count  => s_cnt);
+			
+	IMemory : entity work.ROM(Behavioral)
+			generic map(addressSize => 4)
+			port map(  enable    => RI,
+						  address	  => s_cnt,
+						  readData  => s_readData);
+			 
+	Mux1 : entity work.Mux2_1(Behavioral)
+			generic map(N => 3)
+			port map( sel    => RegDst,
+						 dataIn(0) => s_readData(6 downto 4),
+						 dataIn(1) => s_readData(9 downto 7),
+			          sel => s_wrAddress);
+			
+	RegisterBlock : entity work.Registers(Behavioral)
+			generic map(registerBits => 8,
+							addressBits => 3)
+			port map( clk         => clk,
+						 addressPos1 => s_readData(12 downto 10),
+						 addressPos2 => s_readData(9 downto 7),
+						 rdData1     => s_readData1,
+						 rdData2     => s_readData2,
+						 wrAddr      => s_WrAddress,
+						 wrData      => s_wrData,
+			          wrEnable    => RegWr,
+					    reset       => reset);
+			
+	Mux2 : entity work.Mux2_1(Behavioral)
+			generic map(N => 8)
+			port map( sel    => AluSrc,
+						 dataIn(0) => s_readData2,
+						 dataIn(1) => s_sizeOut,
+						 y => s_op2);
+			
+	ALU  : entity work.ALU(Behavioral)
+			port map( AluOp => ALUOp,
+			          op1 => s_readData1,
+						 op2 => s_op2,
+			          res => s_addr);
+						 
+	DMemory : entity work.RAM(Behavioral)
+			generic map(N => 8)
+			port map( writeClk      => clk, 
+	                wE      => MemWr,
+						 wD   => s_wrData,
+					    Addr  => s_readData2,
+						 RD => s_input1);
+						 
+	Mux3 : entity work.Mux2_1(Behavioral)
+			generic map(N => 8)
+			port map( sel    => MemtoReg,
+						 dataIn(0) => s_input1,
+					    dataIn(1) => s_addr,
+						 y  => s_wrData );
+			
+	SignExtend : entity work.SignExtend(Behavioral)
+			port map( wI => s_readData (6 downto 0),
+			          wE => s_sizeOut);
+			
+ opcode <= s_readData(15 downto 13);
+ func	 <= s_readData(3 downto 0);
+ 
+end Structural;

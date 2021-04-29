@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/LSD/Aula 1/Parte 1/GateDemo/simulation/qsim
+vGateDemo
+Z1 !s110 1581949799
+!i10b 1
+!s100 HCI<9Q9P7AEeO4<ABBSk23
+IfT?JzZ3W0g5agBneobK9d1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1581949795
+Z4 8GateDemo.vo
+Z5 FGateDemo.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1581949798.000000
+Z8 !s107 GateDemo.vo|
+Z9 !s90 -work|work|GateDemo.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@gate@demo
+vGateDemo_vlg_vec_tst
+R1
+!i10b 1
+!s100 4_9IiaIe^X:=77aO42Od:0
+IKXXLPJR?7IKeI[CEe@FZP0
+R2
+R0
+w1581949792
+8GateDemo.vwf.vt
+FGateDemo.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1581949799.000000
+!s107 GateDemo.vwf.vt|
+!s90 -work|work|GateDemo.vwf.vt|
+!i113 1
+R10
+R11
+n@gate@demo_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 jCRjddZ>XFK@YR`IbfSf?3
+I2F<JDaVcX>P^YkE`8deYR0
+R2
+R0
+R3
+R4
+R5
+L0 121
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

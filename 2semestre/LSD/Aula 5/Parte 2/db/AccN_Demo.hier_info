@@ -1,0 +1,62 @@
+|AccN
+reset => regn:RegN.reset
+clk => regn:RegN.clk
+enable => regn:RegN.enable
+dataIn[0] => addern:AdderN.operand0[0]
+dataIn[1] => addern:AdderN.operand0[1]
+dataIn[2] => addern:AdderN.operand0[2]
+dataIn[3] => addern:AdderN.operand0[3]
+dataIn[4] => addern:AdderN.operand0[4]
+dataOut[0] << regn:RegN.dataOut[0]
+dataOut[1] << regn:RegN.dataOut[1]
+dataOut[2] << regn:RegN.dataOut[2]
+dataOut[3] << regn:RegN.dataOut[3]
+dataOut[4] << regn:RegN.dataOut[4]
+
+
+|AccN|AdderN:AdderN
+operand0[0] => Add0.IN5
+operand0[1] => Add0.IN4
+operand0[2] => Add0.IN3
+operand0[3] => Add0.IN2
+operand0[4] => Add0.IN1
+operand1[0] => Add0.IN10
+operand1[1] => Add0.IN9
+operand1[2] => Add0.IN8
+operand1[3] => Add0.IN7
+operand1[4] => Add0.IN6
+result[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AccN|RegN:RegN
+reset => dataOut.OUTPUTSELECT
+reset => dataOut.OUTPUTSELECT
+reset => dataOut.OUTPUTSELECT
+reset => dataOut.OUTPUTSELECT
+reset => dataOut.OUTPUTSELECT
+clk => dataOut[0]~reg0.CLK
+clk => dataOut[1]~reg0.CLK
+clk => dataOut[2]~reg0.CLK
+clk => dataOut[3]~reg0.CLK
+clk => dataOut[4]~reg0.CLK
+enable => dataOut.OUTPUTSELECT
+enable => dataOut.OUTPUTSELECT
+enable => dataOut.OUTPUTSELECT
+enable => dataOut.OUTPUTSELECT
+enable => dataOut.OUTPUTSELECT
+dataIn[0] => dataOut.DATAB
+dataIn[1] => dataOut.DATAB
+dataIn[2] => dataOut.DATAB
+dataIn[3] => dataOut.DATAB
+dataIn[4] => dataOut.DATAB
+dataOut[0] <= dataOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

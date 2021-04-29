@@ -1,0 +1,36 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity ALU is
+	generic(N : positive := 8);
+		port(rs, rt : in  std_logic_vector(2 downto 0);
+			  func   : in  std_logic_vector(3 downto 0);
+		     rd: out std_logic_vector(2 downto 0));
+end ALU;
+
+architecture Behavioral of ALU is
+	signal s_rs, s_rt, s_rd : unsigned((N-1) downto 0);
+	
+begin
+	s_rs <= unsigned(rs);
+	s_rt <= unsigned(rt);
+	
+
+	
+	with func select
+		s_rd <= s_rs + s_rt       when "0000", --ADD
+				  s_rs - s_rt       when "0001", --SUB
+				  s_rs and s_rt     when "0010", --AND
+	           s_rs or s_rt      when "0011", --OR
+	           s_rs xor s_rt     when "0100", --XOR
+	           s_rs nor s_rt     when "0101", -- NOR			  
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+		
+end Behavioral;

@@ -1,0 +1,359 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx} 
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{FUTEBOL}
+\def\data{25/11/2019}
+\def\autores{Sara Gonçalves, Leonardo Fiuza}
+\def\autorescontactos{(98376) sccg@ua.pt, (97772) l.fiuza@ua.pt}
+\def\versao{versão 1}
+\def\departamento{Departamento de eletrónica, telecomunicações e informática}
+\def\empresa{Mestrado integrado em Engenharia de computadores e telemática}
+\def\logotipo{ua.pdf}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+Neste trabalho iremos apresentar o tema Futebol. Escolhemos este tema uma vez que nos foi dada uma margem infinita de escolhas e é um assunto que temos bastantes conhecimentos adquiridos. 
+Apesar de ser um tema que abrange bastantes áreas, iremos apresentar um pouco do essencial sobre este desporto.
+\\
+Começaremos por enumerar as versões primárias do futebol, princípios que a esmagadora maioria das pessoas desconhece. Este desporto, tão popular hoje em dia tem centenas de anos de história, ao longo dos quais sofreu inúmeras alterações até se tornar naquilo que conhecemos hoje em dia. Começando por um dos maiores impérios de sempre, o império chinês, mais tarde foram surgindo versões semelhantes em determinadas características. Apesar de todas as semelhanças, não se tem certeza da ligação entre estes jogos primordiais e a versão atual, uma vez que a ligação entre as várias civilizações e as ilhas Britânicas (berço do futebol moderno) é questionada pelos especialistas. \\
+Abordaremos também a questão da influência na economia do futebol no mundo de hoje, pois é do conhecimento geral que este mercado movimenta milhões. Para além da economia, este tem também grande impacto no mundo das artes, desde da música, até às artes visuais. Tal como abordaremos também o impacto da era tecnológica no mesmo. \\
+Hoje em dia não é possível falar de algo tão relevante social e economicamente como o futebol sem abordar algumas das entidades organizadoras pelo que, enumeraremos algumas destas instituições e organizações que tornam possíveis tantos eventos e competições.
+Tal como os desportos primordiais tornaram o futebol naquilo que é hoje em dia, também este inspirou atividades diversas pelo que serão abordadas também. 
+\end{abstract}
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+\renewcommand{\abstractname}{Agradecimentos}
+\begin{abstract}
+Pelo facto de realizarmos este trabalho mais facilmente, agradecemos ao professor António Adrego pelos ensinamentos relativamente à utilização do \LaTeX. Agradecemos também aos colegas do nosso curso que nos ajudaram com informações à cerca deste tema. 
+\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O que é o Futebol?}
+\label{chap.o que é o Futebol}
+
+O futebol é um jogo disputado entre duas equipas, englobando 11 jogadores em campo por cada uma destas, e um árbitro. \\
+Este desporto consiste em introduzir uma bola dentro da baliza do adversário, contando assim com mais um ponto (denominado de golo) para a equipa que o fizer. Chegando ao fim do jogo, a equipa com mais pontos marcados ganha.
+Esta modalidade é considerada o desporto mais popular do mundo, contando com mais de 270 milhões de praticantes nas suas diversas competições.\\
+
+\section{História do Futebol}
+\label{História do Futebol}
+
+Hoje em dia qualquer pessoa pega numa bola para jogar, porém raras são aquelas pessoas que conhecem a origem deste desporto. Os primeiros registos de algo semelhante ao futebol dos nossos dias data de uma época bastante longínqua, mas que se julga ter sido a altura da criação do futebol, numa atividade que consistia em chutar objetos redondos numa atividade que ainda não conhecia normas ou regras.\\ 
+Esta altura corresponde ao século lll antes de Cristo, na antiga China onde à data se vivia a dinastia "Han", que se prolongou durante 400 anos. Durante este período, reinou um imperador denominado de "Hang-ti", que tinha o costume de oferecer as cabeças dos inimigos derrotados aos seus soldados que mais tarde viriam a ser substituídas por bolas de couro num jogo já com algumas leis. \newpage
+Nesta altura, o jogo seria denominado de “ts'uh Kúh” ou “cuju” que consistia em chutar uma bola contra uma rede, após passar pelos adversários. Cerca de cinco a seis séculos mais tarde ao longo do Extremo Oriente foi surgindo uma nova variante japonesa do “Cuju” chamada “Kemari”, que tinha a particularidade, não só de passar a bola entre os jogadores sem tocar no chão, mas também de ser praticado principalmente em rituais e cerimónias, uma vez que inclusive fazia-se um ritual para benzer a bola que simbolizava o sol.\\
+ Até hoje esses rituais ainda são praticados no Japão devido ao seu caráter tradicional e cultural. Porém ao contrário do "cuju", as mulheres não poderiam praticar "kemari". Durante a prática desta atividade era ainda expressamente proíbido o contacto físico entre os participantes.
+ 
+\begin{figure}[!htp]
+\includegraphics[scale=0.25]{/home/linux/Downloads/800px-Kemari_Matsuri_at_Tanzan_Shrine_2.jpg}
+\includegraphics[scale=1.2]{/home/linux/Downloads/Emperor_Taizu_play_Cuju.jpg}
+\caption{Kemari e Cuju}
+\end{figure}
+
+\newpage
+Mais tarde, no mediterrâneo desenvolveram-se duas novas formas deste jogo chamados ”harpasto” e “epísquiro”, que surgiram na Roma e na Grécia, respetivamente. Apesar de tudo não se sabe muito sobre estas duas formas de jogar pois os registos são escassos. Sobre o "harpasto", sabe-se apenas que se jogava entre duas equipas num campo retangular e que o objetivo consistira em passar a bola para o campo adversário.\\ 
+Já sobre o "epísquiro"   sabe-se apenas que era disputado entre duas equipas, compostas por 12 a 14 jogadores em que era permitido o uso das mãos. \\
+Durante a época dos descobrimentos, foram descobertas novas culturas e consequentemente novos desportos que se pensa terem tido também o seu papel no desenvolvimento do futebol tal como o conhecemos. Estes desportos provenientes do novo mundo eram diferentes também entre si, dando exemplos do:
+
+\begin{itemize}
+\item “pok ta pok”, proveniente da cultura maia, que à data teria cerca de 3 mil anos de registos. 
+\item Documentos jesuítas que descreviam um jogo chamado “manga ñembosarái” praticado no paraguai e que seria bastante semelhante ao nosso futebol. 
+\item Descoberta da existência de outros desportos semelhantes ao futebol na Oceânia, (denominado “marngrook”), américa central e Alasca (“denominado Pasuckuakohowog”). 
+\end{itemize}  
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=0.3]{/home/linux/Downloads/origem-england.jpg}
+\caption{Origem do Futebol}
+\end{figure}
+
+\newpage
+No entanto, hoje em dia ainda é discutível a influência de todos estes desportos no futebol atual, pois nenhum deles teve contacto com as ilhas britânicas que é considerado o berço do futebol moderno, apesar das semelhanças serem indiscutíveis.
+Com a passagem do tempo, o futebol tal como o conhecemos foi se criando nas ilhas britânicas. Esta versão “experimental” do futebol fez grande sucesso por todo o Reino Unido, devido à sua falta de regras e extrema violência, pelo que foi implementado nas escolas o “futebol escolar” que mais tarde veio a ser proíbido pelo Rei Eduardo lll alegando que este não era um desporto cristão. Esta modalidade permaneceu banida durante 500 anos.\\ Ainda assim, o futebol manteve-se vivo, pois esta não era a única forma de ser praticado, uma vez que devido à sua fama ascendente foram criadas versões menos violentas e com mais regras pela Europa. \\
+A principal variante foi o Cálcio Fiorentino que teve origem em Florença, cidade italiana. Este desporto teve uma enorme influência no futebol atual, devido às normas implementadas e à emotividade com que se viviam as partidas.
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=0.4]{/home/linux/Downloads/Calcio_fiorentino_1688.jpg}
+\caption{Cálcio Fiorentino}
+\end{figure}
+
+\chapter{Expansão Mundial}
+\label{Expansão Mundial}
+
+Com o passar do tempo, o futebol foi sendo convertido naquilo que é atualmente. Apesar da sua primeira forma oriunda das ilhas britânicas, houve várias variantes por toda a europa e mais tarde por todo o mundo, dando origem a várias associações e inúmeros clubes por todo o lado. Começaram principalmente a surgir no reino, em países como Escócia, Pais de Gales, Irlanda, entre outros. No final de 1880 começou-se a espalhar o futebol atual por todo o mundo devido ao facto de o império Britânico ser uma grande influência nessa altura. Os primeiros países fora do Reino Unido foram: Países Baixos, Nova Zelândia, Dinamarca, Chile, Argentina, Suécia, Noruega, Hungria, Uruguai, Alemanha, Itália, Bélgica e Confederação Helvética. Cada um destes países foi criando a sua própria liga de futebol com o seu próprio estilo. Mais tarde os restantes países foram aderindo cada vez mais a este grande desporto que rapidamente se tornou mundial. \\
+Naquela época, foram-se desenvolvendo várias táticas e estilos de jogo, derivadas das várias variantes que existiam em cada região do mundo. A determinada altura foi notória uma clara diferença de táticas por todo o lado, pois as maneiras de disputar este jogo foram sendo cada vez mais apuradas. Até que estas claras diferenças foram se dissipando, pois, com o passar do tempo, e com a evolução dos mercados de transferências nacionais e internacionais e com as competições organizadas entre vários países, todos estes estilos foram unificados uma vez que as respetivas equipas e países aprendiam mutuamente os estilos e adaptavam-no ao seu, melhorando assim cada vês mais este grande desporto admirado e praticado mundialmente.
+
+\section{Influência no mundo }
+\label{Influência no mundo}
+
+O Futebol é um desporto tão envolvido na nossa sociedade que tem um grande peso não só no dia a dia de cada pessoa mas também na economia/cultura de um país.
+
+Segundo a \ac{FIFA}, entre 2003 e 2006 este organismo teve um lucro de 2422 milhões de francos suíços que corresponde a 92\%\ dos ganhos desta. Todo este dinheiro veio das diversas competições internacionais que esta Entidade organizou durante este período de tempo. \\
+O Futebol desempenha também um papel fundamental no ramo da solidariedade. Um dos grandes e principais investimentos da FIFA é para o desenvolvimento de espaços para a prática de futebol em áreas menos favorecidas em termos económicos mas também em termos de material e de técnicas para o fazerem por si só, o que resulta numa grande mais valia para enúmeras famílias que ficam assim com mais recursos. A FIFA trabalha em conjunto também com a UNICEF desde 1999, fornecendo também material de trabalho para que seja repartido por esta organização pertencente à ONU.\\ 
+Para além disto, existem também os jogos de caridade para angariação de fundos para certas e determinadas causas solidárias que contam com enúmeras estrelas do futebol mundial, como, por exemplo, o caso dos estragos causados pelo ciclone "Idai" em Moçambique que contou com a contribuição de vários jogos amigáveis internacionais em que os lucros reverteram a favor dessas pessoas que necessitavam urgentemente de ajuda, e tal como aconteceu com as vítimas dos incêndios de Pedrógão Grande, em que a federação portuguesa de futebol organizou jogos da seleção nacional para que os lucros revertessem para as vítimas deste trágico acidente. 
+\newpage
+O futebol hoje em dia pode ser visto também como uma arte ou cultura. Tanto é que hoje em dia são criadas enúmeras obras de arte e exposições baseadas no futebol. Em 2006 foi realizado o campeonato mundial de futebol, na Alemanha, onde foram realizadas várias obras de arte, mais precisamente esculturas em plástico que tinham por base o campeonato do mundo e a história do futebol alemão. Uma delas inclusive é um par de chuteiras de futebol que continham 14 metros de comprimento e 4,5 metros de altura e contava ainda com serca de 20 toneladas de plástico reciclado. 
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=0.4]{/home/linux/Downloads/800px-Soccer1_Walk_of_Ideas_Berlin.JPG}
+\caption{Par de chuteiras}
+\end{figure}
+
+A adaptação do futebol ao mundo da literatura foi bastante atribulada. Apenas a partir dos anos 60/70 os leitores se começaram a interessar pelo mundo do desporto e consequentemente do futebol. Este interesse coincide com o período do auge dos estudos semióticos que é o estudo e o interesse pela cultura e tradições. 
+\newpage
+Além da literatura, o futebol invadiu o mundo dos filmes.Todavia,já foram realizados filmes ainda que sejam muito escaços aqueles que se realizaram com o apoio da FIFA. Dentro dos filmes futebolísticos mais conhecidos encontra-se a trilogia constituída por: 
+
+\begin{itemize}
+\item Goal! (2005) 
+\item Goal ll: Living the Dream (2007) 
+\item Goal 3(2008)
+\end{itemize} 
+
+\begin{figure}[!htp]
+\includegraphics[scale=0.7]{/home/linux/Downloads/200px-GoalPoster.jpg}
+\includegraphics[scale=0.5]{/home/linux/Downloads/index.jpeg}
+\includegraphics[scale=0.5]{/home/linux/Downloads/golo.jpeg}
+\caption{Trilogia}
+\end{figure} 
+
+
+ Todas foram realizadas com o apoio da FIFA, que também lançou um filme baseado no campeonato do mundo de 2006. Pode-se ver também uma grande incidência futebolística nos desenhos animados como o anime japonês “Captain Tsubasa” que popularizou o futebol no Japão, ou séries latinas/mexicanas como é o caso da série “Onze”. \\
+O futebol tem também influencia claramente no ramo musical, pois promove vários concertos em várias competições e conta também com álbuns musicais criados para promover jogos.
+
+\chapter{Entidades Organizadoras e Competições oficiais}
+\label{chap.Entidades Organizadoras e Competições oficiais}
+
+\section{Entidades Organizadoras}
+\label{Entidades Organizadoras}
+Como em qualquer desporto, existem inúmeras Entidades com o propósito de organizar da melhor maneira as competições de futebol. Considerando todas as competições, desde os escalões inferiores,ao futsal, futebol de praia, feminino... \\
+De uma forma geográficamente crescente, começando, por exemplo, a {\bf Associação de futebol de Aveiro}, tem como trabalho organizar todas as competições desse distrito. \\ Esta é financiada pela {\bf Federação Portuguesa de Futebol}, que tem como dever, não só de distribuir fundos para todas as associações distritais, mas também organizar todas as competições nacionais existentes no país.\\
+A {\bf \ac{UEFA}} é a instituição que liga todas as 55 federações nacionais da Europa. Esta organiza 9 competições entre nações, tais como o Campeonato Europeu e a Taça das Confederações, e 4 competições entre clubes, entre as quais a Liga dos Campeões e a Liga Europa. \\
+A {\bf FIFA} é a entidade máxima do Futebol, sem fins lucrativos, que dirige todas as associações internacionais. É constituída por 6 confederações continentais, entre elas a UEFA, a CONCACAF e a CAF. Esta também organiza competições, tais como o Campeonato do Mundo e o Campeonato do Mundo de clubes. \newpage
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=1]{/home/linux/Downloads/Fifa.png}
+\caption{Confederações continentais}
+\end{figure} 
+
+\section{Principais competições}
+\label{Principais Competições}
+
+Durante estes anos todos, as Entidades foram criando várias competições para todo o tipo de futebol. Estas têm um papel importante, uma vez que é através de títulos e conquistas que é demonstrado a grandeza de um clube, seleção, ou até mesmo de um jogador profissional. Entre todas, as competições mais importantes dos vários tipos de futebol são: 
+\begin{itemize}
+\item  Para o futebol masculino/feminino: Liga dos Campeões, Mundial, Europeu, Premier League, Liga BBVA, Supertaça europeia
+
+\item Para o futsal masculino/feminino: Liga dos Campeões, Campeonatos nacionais, Supertaça Europeia, Mundial, Europeu 
+
+\item Para o futebol de praia: Campeonatos Nacionais, Mundial, Europeu
+\end{itemize}
+
+A competição mais importante é sem dúvida o Campeonato do Mundo de futebol masculino, uma vez que reúne os melhores jogadores de cada país para disputarem este grandioso troféu. Esta é realizada de 4 em 4 anos, em países eleitos pela FIFA. 32 Seleções participam, representando todos os continentes, havendo primeiramente uma fase de grupos seguida de eliminatórias. \newpage
+
+O Brasil é o país com mais Mundiais, com 5, seguido da Alemanha e da Itália com 4. Portugal nunca venceu esta competição, tendo conquistado a melhor classificação em 1966, o 3º lugar. \\
+
+A Liga dos Campeões (Champions League) é o troféu mais pretendido por todos os clubes europeus. A primeira edição desta competição ocorreu na época de 1955-1956, sendo designada por Copa dos Campeões Europeus. Apenas em 1993 é que foi renomeada para Liga dos Campeões da UEFA.
+ O clube com mais vitórias desta competição é o Real Madrid, com 13, seguido do Milan com apenas 7.
+ 
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=0.5]{/home/linux/Downloads/images.jpeg}
+\caption{Exemplos de ligas}
+\end{figure}  
+ 
+ \section{Jogadores históricos}
+\label{Jogadores históricos}
+Atualmente existem bastantes recordes no futebol, como, por exemplo, o golo mais rápido do jogo, quantidade de golos de um jogador por competição, número de internacionalizações... 
+No entanto, como em qualquer desporto, no futebol existe um enorme ênfase nos jogadores históricos, entre os quais podemos destacar: 
+
+\begin{itemize}
+\item Pelé: maior futebolísta de todos os tempos, brasileiro com mais de mil golos na carreira. Destaque para o prémio recebido pela FIFA como o jogador do século XX
+\item Maradona: considerado na sua época "El Diez" pela sua classe e magia dentro do campo
+\item Eusébio: conhecido por "Pantera Negra" pela sua atitude felina dentro do campo, foi um dos melhores jogadores de todos os tempos
+\item Beckenbauer: único campeão do mundo como jogador e treinador.
+\item di Stéfano: um dos jogadores mais talentosos de sempre, ganhando inúmeros títulos pelo Real Madrid
+\end{itemize}
+Entre estes existem muitos outros, tal como Púskas, Platini, Garrincha...
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=0.1]{/home/linux/Downloads/Screenshot_20190616-1056393.png}
+\includegraphics[scale=0.5]{/home/linux/Downloads/beck.jpeg}
+\caption{Pelé e di Stéfano; Beckenbauer}
+\end{figure} 
+Ao longo do tempo foram aparecendo vários jogadores com inúmeras qualidades, marcando o futebol, apresentando nomes como Ronaldinho, Kaká, Figo, Ronaldo, Pirlo, Puyol... \\
+Atualmente, no futebol moderno, existem bastantes jogadores influentes na história, enumerando, por exemplo: Cristiano Ronaldo, Messi, Neymar, Buffon,Zlatan,Módric ... 
+
+\chapter{Regras Atuais do Futebol}
+\label{chap.Regras Atuais do Futebol}
+
+Ao longo dos anos o Futebol foi sendo alterado em termos de regras oficialmente definidas para este desporto. No entanto, existem várias regras que existem desde a criação do Livro de Regras de Futebol, entre elas:
+\begin{itemize}
+\item {\bf Terreno de jogo}: retângulo com um comprimento entre 90m a 120m, e largura entre 45m a 90m, tendo que ser visivelmente marcado com linhas brancas. As balizas têm que estar a meio da linha de fundo, sendo marcado a pequena área com 5 metros de distância e a grande com 16,5 metros. Os postes da baliza distam aproximadamente 7 metros entre eles, tendo a trave uma altura de 2,44m.
+
+\item {\bf A Bola}: deve ser esférica, de borracha e com uma circunferência que não passe os 70cm e com um peso não superior a 450g.
+
+\item {\bf Os Jogadores}: Dentro do campo apenas podem estar 11 jogadores de cada equipa, sendo o mínimo 7, existindo sempre um guarda-redes. Na maioria dos jogos oficias o número de substituições é 3, no entanto este pode variar consoante a competição, podendo haver, por exemplo, 6 substituições durante um jogo, por equipa.
+
+\item {\bf Equipamentos}: Nenhum jogador pode utilizar objetos considerados perigosos para o decorrer do jogo, tal como pulseiras ou brincos. Os equipamentos de ambas as equipas e dos árbitros têm que ser de cor diferente, para não haver confusão. Todos os jogadores têm que ser portadores de chuteiras e caneleiras, inclusive os guarda-redes, sendo que estes têm que usar uma camisola que os distinga dos restantes jogadores e árbitros. Cada camisola tem que ter um número que identifique cada jogador.
+
+\item {\bf Árbitros}: O jogo terá que ser dirigido por 3 árbitros: 1 principal que anda dentro do campo, e 2 assistentes de linha com o propósito de marcar os fora de jogo.
+
+\item {\bf Duração da partida}: O jogo tem a duração de 90 minutos divididos em 2 partes, havendo um intervalo de 10 minutos entre elas.
+\end{itemize}
+
+Ao longo dos anos, a FIFA tem vindo a organizar reuniões com o intuito de rever e criar regras, sendo que as regras-base indicadas aqui em cima nunca foram alteradas. No entanto existem várias regras alteradas, como no caso do fora-de-jogo, o pontapé-de-saída e a utilização dos cartões (amarelo/vermelho).
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=1]{/home/linux/Downloads/index.png}
+\caption{Dimensões do campo}
+\end{figure} 
+\chapter{Inovações tecnológicas}
+\label{Inovações tecnológicas}
+
+O futebol tem sido cada vez mais afetado pelo uso da tecnologia, num bom sentido, uma vez que tem tornado os jogos mais justos, facilitando o trabalho da equipa de arbitragem, mas também mostrando as debilidades e imprecisões da mesma. \\
+Um dos avanços é sem dúvida a transmissão dos jogos em vários ângulos, pois permite ao telespectador ver vários ângulos de cada jogada, tendo precessão daquilo que acontece com muita mais precisão do que os espectadores presentes no campo, a equipa de arbitragem ou até mesmo os próprios jogadores. \\
+ Devido a isto, já foram implementados ecrãs gigantes nos estádios das maiores competições, para proporcionar uma melhor experiência a quem decide ver o jogo no estádio. Outro grande avanço que veio melhorar as experiências desportivas foram os sistemas de rádio utilizado pela equipa de arbitragem entre eles pois permite um contacto mais rápido e consequentemente uma maior eficácia na marcação de grandes penalidades ou outro tipo de infrações.  \\
+ Para juntar a este equipamento foi desenvolvido um sistema chamado “olho de falcão” cuja funcionalidade deste é identificar se a bola passou a linha de baliza ou não, enviando um sinal para o smart watch no pulso do árbitro que irá dar o veredito final. \\
+Mais recentemente, foi implementado um sistema de vídeo chamado “vídeo-arbitro ”. Este sistema consiste em fornecer as imagens dos lances a outro árbitro que por sua vez analisa a jogada em causa e que, caso entenda ser necessário, alesta o árbitro da partida para ver as imagens pois, na eventualidade de ter cometido um erro de decisão possa corrigi-lo e assim melhorar a qualidade da arbitragem. \\
+
+\begin{figure}[!htp]
+\centering 
+\includegraphics[scale=1]{/home/linux/Downloads/video.jpeg}
+\caption{Vídeo-árbitro}
+\end{figure} 
+\newpage
+A tecnologia tem também um impacto indireto, pois esta pode ser utilizada para analisar os jogadores e assim avaliar se estão em condições de jogar ou não, promovendo assim uma melhor qualidade de espetáculo e mais segura para os próprios praticantes. O jogador pode ainda ter uma melhor qualidade do seu treino com o uso da tecnologia que lhe proporciona máquinas de ginásio que por sua vez maximizam os treinos e os rendimentos físicos do mesmo. \\
+
+Como é evidente, estas inovações foram bastante importantes para a melhoria da qualidade do futebol profissional a nível de arbitragem (que anteriormente era registado em papel), a nível da qualidade com que é transmitido ao espectador e também a nível da forma física dos jogadores. 
+
+\chapter{Variedades de Futebol}
+\label{Variedades de Futebol}
+Ao longo dos anos, a FIFA foi criando várias competições para outros tipos de futebol como o qual estamos habituados a seguir. Existem portanto, outras variedades de futebol, destacando o futsal, o futebol de praia, o futebol feminino, entre outros. 
+
+\section{Futsal}
+\label{Futsal}
+O futebol de salão, ou como é conhecido, o futsal, é o futebol adaptado para a prática em pavilhões, ou seja no interior. As diferenças é que cada equipa é constituída por 5 jogadores, com uma duração de 20 minutos parados para cada parte, havendo no total duas. As foras, ao contrário do futebol, são marcadas com o pé, e os pontapés de saída com a mão, devido ao curto espaço apresentado. No futsal não existe número de substituições autorizadas.\\
+As federações mais "altas" responsáveis por esta modalidade são a FIFA e a AMF ( Associação Mundial de Futsal)
+No futsal também existem jogadores com uma qualidade extrema, e com bastante influência na sociedade, como o caso do português Ricardinho e do brasileiro Falcão.
+
+\section{Futebol de praia}
+\label{Futebol de praia}
+O futebol de areia, mais conhecido como futebol de praia, é uma variante do futebol jogado num campo de areia.
+Como desporto organizado é bastante recente, tendo o primeiro jogo oficial de futebol de praia ocorrido em 1992. 
+Só é permitido 5 jogadores por equipa, com substituições ilimitadas. Os jogadores são obrigados a estarem todos descalços para poderem jogar. O jogo tem 3 partes, com a duração de 12 minutos cada.
+Existem também vários jogadores com destaque nesta modalidade, como o caso do Madjer. \\
+
+\begin{figure}[!htp]
+\includegraphics[scale=0.4]{/home/linux/Downloads/Beach-Soccer-Bro.jpg}
+\includegraphics[scale=1.2]{/home/linux/Downloads/ri.jpeg}
+\caption{Madjer e Ricardinho}
+\end{figure}
+
+\chapter*{Contribuições dos autores}
+LF : Leonardo Fiuza \\
+SG : Sara Gonçalves
+\begin{table}[h]
+\centering
+\caption{Contribuição de cada autor}
+\vspace{0.5cm}
+\begin{tabular}{r|lr}
+Capítulo & Acrónimo \\
+\hline
+1 &  LF \\
+2 &  LF \\
+3 &  SG \\
+4 &  SG \\
+5 &  LF \\
+6 &  SG \\
+\end{tabular}
+\end{table}
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{FIFA}[FIFA]{Federação internacional de Futebol}
+\acro{UEFA}[UEFA]{União das Associações Europeias de Futebol} 
+\end{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+Neste trabalho apenas foi preciso recorrer a informações vindas da \cite{wiki:Futebol}
+
+\end{document}

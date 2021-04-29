@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Rom is 
+	 generic ( size : 
+    port (address: in std_logic_vector(15 downto 0);
+	       dataOut: out std_logic_vector(7 downto 0)); 
+end Rom;
+
+architecture Behavioral of ROM is
+	subtype TDataWord is std_logic_vector(15 downto 0);
+	type TROM is array (0 to 15) of TDataWord;
+	constant c_memory: TROM := (X"02" , X"01" , others => X"00");
+
+	addr_counter : entity work.Counter(Behavioral)
+						port map(clk => s_clk,
+									reset => s_reset,
+									cntOut => s_address);
+	memory : entity work.ROM_8x4(Behavioral)
+				port map(address => s_address,
+				dataOut => s_romData);
+
+	
+begin
+	dataOut <= c_memory(to_integer(unsigned(address)));
+end Behavioral;		 

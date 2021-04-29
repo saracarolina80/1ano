@@ -1,0 +1,167 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/Projeto/simulation/modelsim
+Ealu
+w1591102485
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+8C:/Users/User/Desktop/Projeto/ALU.vhd
+FC:/Users/User/Desktop/Projeto/ALU.vhd
+l0
+L5
+Va1NVmD5E?=`QGeO4elOA]0
+!s100 ChBZ:Y05kc9OHPWg5aFX30
+Z4 OV;C;10.5b;63
+31
+Z5 !s110 1591613385
+!i10b 1
+Z6 !s108 1591613385.000000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Projeto/ALU.vhd|
+!s107 C:/Users/User/Desktop/Projeto/ALU.vhd|
+!i113 1
+Z7 o-93 -work work
+Z8 tExplicit 1 CvgOpt 0
+Ehard_block
+Z9 w1591613311
+Z10 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z11 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 N5CzKW88F^ShIK@<7Vek12
+Z12 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R2
+R3
+Z13 DPx10 cycloneive 21 cycloneive_components 0 22 K8IbX`K5[Y1gJUKg2X_071
+R0
+Z14 8C:/Users/User/Desktop/Projeto/simulation/modelsim/PROJETO_min_1200mv_0c_fast.vho
+Z15 FC:/Users/User/Desktop/Projeto/simulation/modelsim/PROJETO_min_1200mv_0c_fast.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R4
+32
+Z16 !s110 1591613403
+!i10b 1
+Z17 !s108 1591613403.000000
+Z18 !s90 -reportprogress|30|-work|work|C:/Users/User/Desktop/Projeto/simulation/modelsim/PROJETO_min_1200mv_0c_fast.vho|
+Z19 !s107 C:/Users/User/Desktop/Projeto/simulation/modelsim/PROJETO_min_1200mv_0c_fast.vho|
+!i113 1
+Z20 o-work work
+R8
+Astructure
+R10
+R11
+R12
+R2
+R3
+R13
+Z21 DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+Z22 V`^CmQg<48W[ez[JL_5@Yn2
+Z23 !s100 2S?JL;LJ@<3:BHXTNcXS]3
+R4
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R20
+R8
+Eprocessador
+R9
+R10
+R11
+R12
+R2
+R3
+R13
+R0
+R14
+R15
+l0
+L77
+VedMhQTYdk@217?cVeR3ke0
+!s100 hIVY[>mozLR0Rl09Cce2S0
+R4
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R20
+R8
+Astructure
+R10
+R11
+R12
+R2
+R3
+R13
+Z24 DEx4 work 11 processador 0 22 edMhQTYdk@217?cVeR3ke0
+l167
+L117
+Z25 VA<3XF;dLiZ@>^Tj:DANK33
+Z26 !s100 FeNTGgDc696Rb]=>_TNAS0
+R4
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R20
+R8
+Esignextend
+Z27 w1591111351
+R1
+R2
+R3
+R0
+Z28 8C:/Users/User/Desktop/Projeto/SignExtend.vhd
+Z29 FC:/Users/User/Desktop/Projeto/SignExtend.vhd
+l0
+L5
+VFoz=KNOZMA<?lYaWHQQB:0
+!s100 BIUkmMzzeD>`R`6V3RYNK2
+R4
+31
+R5
+!i10b 1
+R6
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Desktop/Projeto/SignExtend.vhd|
+Z31 !s107 C:/Users/User/Desktop/Projeto/SignExtend.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R1
+R2
+R3
+DEx4 work 10 signextend 0 22 Foz=KNOZMA<?lYaWHQQB:0
+l12
+L11
+Vd]_hEBe>>Tec1`eCRgnc]0
+!s100 kS3zI[CMOId?I_F`;0gH:3
+R4
+31
+R5
+!i10b 1
+R6
+R30
+R31
+!i113 1
+R7
+R8

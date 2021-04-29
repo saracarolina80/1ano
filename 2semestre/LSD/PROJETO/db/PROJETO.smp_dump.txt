@@ -1,0 +1,9 @@
+
+State Machine - |Processador|ControlUnit:controlUnit|f_state
+Name f_state.WriteMem f_state.RegUpdate f_state.Execute f_state.Decode f_state.Fetch f_state.ResT 
+f_state.ResT 0 0 0 0 0 0 
+f_state.Fetch 0 0 0 0 1 1 
+f_state.Decode 0 0 0 1 0 1 
+f_state.Execute 0 0 1 0 0 1 
+f_state.RegUpdate 0 1 0 0 0 1 
+f_state.WriteMem 1 0 0 0 0 1 

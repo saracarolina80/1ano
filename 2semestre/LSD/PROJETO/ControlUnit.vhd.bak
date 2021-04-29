@@ -1,0 +1,58 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all; 
+
+entity ControlUnit is 
+ 
+   port ( clk      : in  std_logic;
+		  reset    : in  std_logic := '0';
+		  EnPc     : in  std_logic;
+		  RegWr    : in  std_logic;
+		  RI       : in  std_logic;
+		  RegDst   : in  std_logic;
+        MemWr    : in  std_logic;
+		  MemtoReg : in  std_logic;
+		  ALUSrc   : in  std_logic;
+		  ALUOp    : in  std_logic;
+		  func     : out std_logic;
+		  opcode   : out std_logic;
+		  
+end ControlUnit;
+		  
+architecture Behavior of ControlUnit is 
+    type type_fstate is (Reset,Fetch,Decode,Execute,RegUpdate,WriteMem)
+	 Signal fstate : type_fstate;
+	 Signal reg_fstate : type_fstate;
+  
+  begin
+    process(clk, reg_fstate)
+	 begin 
+	     if ( clk = '1' and clk'event) then 
+		      f_sate <= reg_fstate;
+			end if;
+	 end process;
+	 
+	 process( fstate,reset ) 
+	 begin 
+	     if ( reset= '1') then 
+		     reg_fstate <= Reset;
+		  else
+		      
+				
+				case fstate is 
+				  when FETCH => 
+				    RI <='1';
+					 EnPC <= '1';
+				  when EXECUTE => 
+				    if ( opcode = '001') then 
+					   ALUSrc = '0';
+						ALUOp = func;
+					 elsif ( opcode = '110' or opcode = '111' or opcode = '100' ) then 
+					   ALUSrc = '1';
+						ALUOp = 0000;
+					 end if;
+			    end case;
+				end if;
+			end process;
+		end behavior;
+				
